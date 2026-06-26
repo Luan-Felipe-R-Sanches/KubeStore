@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kubestore-config
+data:
+  APP_MESSAGE: "Bem-vindo à KubeStore Produção!"
+  LOG_LEVEL: "INFO"
