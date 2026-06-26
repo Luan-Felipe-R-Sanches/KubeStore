@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubestore-deployment
+  labels:
+    app: kubestore
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kubestore
+  template:
+    metadata:
+      labels:
+        app: kubestore
+    spec:
+      containers:
+      - name: kubestore-container
+        image: kubestore:v1
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
